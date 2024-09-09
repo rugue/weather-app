@@ -50,7 +50,6 @@ const HomeScreen = () => {
   const CITY = "London";
 
   const fetchWeatherData = async () => {
-    // We'll implement this in the next step
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`

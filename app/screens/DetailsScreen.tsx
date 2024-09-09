@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { RouteProp } from "@react-navigation/native";
 import { useLocalSearchParams } from "expo-router";
 
 // Import or define the WeatherData type here
@@ -19,24 +18,9 @@ type WeatherData = {
   };
 };
 
-// type RootStackParamList = {
-//   Home: undefined;
-//   Details: { weatherData: any };
-// };
-
-// type DetailsScreenRouteProp = RouteProp<RootStackParamList, "Details">;
-
-// type Props = {
-//   route: DetailsScreenRouteProp;
-// };
-
 const DetailsScreen: React.FC = () => {
-  // const { weatherData } = route.params;
   const params = useLocalSearchParams();
   const weatherData = JSON.parse(params.weatherData as string);
-
-  // const parsedWeatherData =
-  //   typeof weatherData === "string" ? JSON.parse(weatherData) : weatherData;
 
   return (
     <View style={styles.container}>
